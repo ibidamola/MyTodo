@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/todo.css" />
+    <title>To Do website</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="logo">
+          <img src="/assets/clickup-symbol_color.svg" alt="logo" />
+          <img src="/assets/clickup-text.svg" alt="logotext" id="logotext" />
+        </div>
+
+        <div class="settings"></div>
+      </div>
+
+      <section class="welcome">
+        <h2 class="title">
+          Welcome, <input type="text" id="name" placeholder="Name here" />
+        </h2>
+      </section>
+    </header>
+
+    <nav>
+      <button onclick="showPage('page1')">
+        <img src="/assets/house (1).png" alt="#" />
+        <p>Home</p>
+      </button>
+      <button onclick="showPage('page2')">
+        <img src="/assets/lotus.png" alt="#" />
+        <p>Fitness</p>
+      </button>
+      <button onclick="showPage('page3')">
+        <img src="/assets/working.png" alt="#" />
+        <p>Work</p>
+      </button>
+      <button onclick="showPage('page4')">
+        <img src="/assets/woman.png" alt="#" />
+        <p>Personal</p>
+      </button>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="page" id="page1">
+          <div class="grid1">
+            <div class="menubar">
+              <p>Everything |</p>
+              <a href="todo.html">Home |</a>
+              <button onclick="showPage('page2')">
+                <img src="/assets/growth.png" alt="#" />
+                <p>Fitness</p>
+              </button>
+              <button onclick="showPage('page3')">
+                <img src="/assets/suitcase.png" alt="#" />
+                <p>Work</p>
+              </button>
+              <button onclick="showPage('page4')">
+                <img src="/assets/group.png" alt="#" />
+                <p>Personal</p>
+              </button>
+            </div>
+            <div class="pg1body">
+              <section class="create-todo">
+                <h2><i class="fa-solid fa-plus"></i>New task</h2>
+                <form id="new-todo-form">
+                  <input
+                    type="text"
+                    name="content"
+                    id="content"
+                    placeholder="e.g. Spend time with family."
+                  />
+                  <div class="newtext"></div>
+
+                  <div class="options">
+                    <label>
+                      <input
+                        type="radio"
+                        name="category"
+                        id="category1"
+                        value="Business"
+                      />
+
+                      <span class="bubble business"></span>
+                      <div>Work</div>
+                    </label>
+
+                    <label>
+                      <input
+                        type="radio"
+                        name="category"
+                        id="category2"
+                        value="Personal"
+                      />
+
+                      <span class="bubble Personal"></span>
+                      <div>Personal</div>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="category"
+                        id="category3"
+                        value="learning"
+                      />
+
+                      <span class="bubble learning"></span>
+                      <div>learning</div>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="category"
+                        id="category4"
+                        value="fitness"
+                      />
+
+                      <span class="bubble fitness"></span>
+                      <div>Fitness</div>
+                    </label>
+                  </div>
+                  <div class="addtodo">
+                    <i class="fa-solid fa-plus"></i>
+                    <input type="submit" value="Add Todo" id="addtask" />
+                  </div>
+                </form>
+              </section>
+
+              <section class="todo-list" draggable="true">
+                <section>
+                  <h3>TO DO</h3>
+                  <p>DUE DATE</p>
+                </section>
+
+                <div class="list" id="todo-list"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="page" id="page2">
+          <div class="grid2">
+            <div class="menubar">
+              <p>Everything |</p>
+              <a href="todo.html">Home |</a>
+              <button onclick="showPage('page2')">
+                <img src="/assets/growth.png" alt="#" />
+                <p>Fitness</p>
+              </button>
+              <button onclick="showPage('page3')">
+                <img src="/assets/suitcase.png" alt="#" />
+                <p>Work</p>
+              </button>
+              <button onclick="showPage('page4')">
+                <img src="/assets/group.png" alt="#" />
+                <p>Personal</p>
+              </button>
+            </div>
+            <div class="title">
+              <i class="fa-solid fa-plus"></i>
+              <h2>Fitness List</h2>
+            </div>
+
+            <div class="pg2body">
+              <p>todo list</p>
+              <div class="list-of-todo">
+                <section><h2>TO DO</h2></section>
+              </div>
+
+              <div class="task-in-progress">
+                <section><h2>TASK IN PROGESS</h2></section>
+              </div>
+              <div class="task-completed">
+                <section><h2>TASK COMPLETED</h2></section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page" id="page3">
+          <div class="grid3">
+            <div class="menubar">
+              <p>Everything |</p>
+              <a href="todo.html">Home |</a>
+              <button onclick="showPage('page2')">
+                <img src="/assets/growth.png" alt="#" />
+                <p>Fitness</p>
+              </button>
+              <button onclick="showPage('page3')">
+                <img src="/assets/suitcase.png" alt="#" />
+                <p>Work</p>
+              </button>
+              <button onclick="showPage('page4')">
+                <img src="/assets/group.png" alt="#" />
+                <p>Personal</p>
+              </button>
+            </div>
+            <div class="title">
+              <i class="fa-solid fa-plus"></i>
+              <h2>Work List</h2>
+            </div>
+
+            <div class="pg3body"></div>
+          </div>
+        </div>
+
+        <div class="page" id="page4">
+          <div class="grid4">
+            <div class="menubar">
+              <p>Everything |</p>
+              <a href="todo.html">Home |</a>
+              <button onclick="showPage('page2')">
+                <img src="/assets/growth.png" alt="#" />
+                <p>Fitness</p>
+              </button>
+              <button onclick="showPage('page3')">
+                <img src="/assets/suitcase.png" alt="#" />
+                <p>Work</p>
+              </button>
+              <button onclick="showPage('page4')">
+                <img src="/assets/group.png" alt="#" />
+                <p>Personal</p>
+              </button>
+            </div>
+
+            <div class="title">
+              <i class="fa-solid fa-plus"></i>
+              <h2>Personal List</h2>
+            </div>
+
+            <div class="pg4body"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-------------------------------------AISHA ADEDIRAN------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/todo.js"></script>
+  </body>
+</html>
